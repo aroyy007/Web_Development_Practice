@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Payment Form</h1>
+        <p>Required field are followed by *</p>
+        <h2>Contact Information</h2>
+        <label for="name">Name : *</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        <fieldset>
+            <legend>Gender *</legend>
+            <p>
+                Male <input type="radio" name="gender" id="male" required>
+                Female <input type="radio" name="gender" id="female" required>
+            </p>
+        </fieldset>
+
+        <p>Address : <textarea name="address" id="address" cols="30" rows="2"></textarea></p>
+
+        <p>
+            <label for="country">Country : *</label>
+            <select name="country" id="country" required>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+            </select>
+        </p>
+        <p>
+            <label for="email">Email : *</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        </p>
+        <p>
+            <label for="phone">Phone : *</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+        </p>
+        <p>
+            <label for="number">Pin Code: *</label>
+            <input type="number" name="pinCode" id="pincode" placeholder="Enter your PinCode" required>
+        </p>
+        <h2>Payment Information</h2>
+        <p>
+            <label for="cardNumber">Card Number : *</label>
+            <input type="number" name="cardNumber" id="cardNumber" placeholder="Enter your card number" required>
+        </p>
+        <p>
+            Card Type *:
+            <select name="card_type" id="card_type" required>
+                <option value="">--Enter your card type--</option>
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="American Express">American Express</option>
+            </select>
+        </p>
+        <p>
+            Expiration Date *:
+            <input type="date" name="exp_date" id="exp_date" required>
+        </p>
+        <p>
+            CVV *:
+            <input type="password" name="cvv" id="cvv" placeholder="Enter your CVV" required>
+        </p>
+        <p>
+            <input type="checkbox" name="agree" id="agree" required>
+            <label for="agree">I agree to the terms and conditions</label>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+
+</html>
