@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7</title>
+    <style>
+        .cat1 {
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .cat2 {
+            width: 200px;
+            height: 200px;
+            border: none;
+            margin-left: 20px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .cat3 {
+            width: 200px;
+            height: 200px;
+            margin-left: 20px;
+            border: none;
+            border-radius: 100px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .search-bar1 {
+            margin-top: 20px;
+            margin-left: 20px;
+            border-color: rgb(200, 200, 200);
+            border-radius: 8px;
+            border-width: 1px;
+            border-style: solid;
+            padding: 12px 15px;
+        }
+
+        .search-bar2 {
+            margin-top: 20px;
+            margin-left: 20px;
+            padding-left: 15px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-right: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            border: none;
+            width: 250px;
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .linkedin-box {
+            width: 400px;
+            font-family: Arial;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .email-box {
+            color: gray;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .email-box2 {
+            width: 380px;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 5px;
+            border-color: rgb(100, 100, 100);
+            padding-top: 7px;
+            padding-bottom: 7px;
+            margin-top: 3px;
+        }
+
+        .disclaimer {
+            font-size: 16px;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .join-button {
+            background-color: rgb(10, 102, 194);
+            color: white;
+            border: none;
+            font-size: 20px;
+            width: 390px;
+            border-radius: 10px;
+            padding: 10px 100px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .join-button:hover {
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .twitter-box {
+            width: 450px;
+            font-family: Arial;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cat9 {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 100px;
+            object-fit: cover;
+            object-position: center;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .text-box {
+            border: none;
+            font-size: 18px;
+            width: 300px;
+            vertical-align: middle;
+            margin-top: 0px;
+        }
+
+        .text-box:active
+        {
+            border: none;
+        }
+
+        .tweet-button {
+            background-color: rgb(29, 155, 240);
+            border: none;
+            border-radius: 30px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: box-shadow 0.15s;
+        }
+        .tweet-button:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="cat1" src="cat.jpg" alt="cat1">
+
+
+    <img class="cat2" src="cat.jpg" alt="cat2">
+
+
+    <img class="cat3" src="cat.jpg" alt="cat3">
+
+    
+    <br>
+
+
+    <hr>
+    <input class="search-bar1" type="text" placeholder="Search">
+    <br>
+
+
+    <hr>
+    <input class="search-bar2" type="text" placeholder="Search Google or type a URL">
+    <br>
+
+
+    <hr>
+    <div class="linkedin-box">
+        <label for="e-mail" class="email-box">Email</label>
+        <input class="email-box2" type="email" name="e-mail" id="e-mail" required>
+
+        <p class="disclaimer">
+            <input type="checkbox" name="check-box" id="check-box" required>By clicking Agree & Join, you agree to the Privacy
+            Policy.
+        </p>
+
+        <button class="join-button" type="submit">
+            Agree & Join
+        </button>
+    </div>
+    <hr>
+
+
+    <div class="twitter-box">
+        <img class="cat9" src="cat.jpg" alt="cat9">
+        <input class="text-box" type="text" name="text-box" id="text-box" placeholder="What's happening?">
+        <button class="tweet-button">Tweet</button>
+    </div>
+</body>
+
+</html>
