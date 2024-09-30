@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+}
+
+#countLabel {
+    display: block;
+    text-align: center;
+    font-size: 10em;
+}
+
+#btnContainer {
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: hsl(214, 98%, 66%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: hsl(214, 94%, 52%);
+}
+
+#mySubmit2 {
+    font-size: 3em;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;       
+    margin: 5px auto;    
+}
+
+.myLabels {
+    font-size: 3em;
+    text-align: center;   
+    display: block; 
+    padding: 0;      
+}
+
+.radioExp label,p
+{
+    font-size: 1.5em;
+    padding: 0;
+}
+#mySubmit3
+{
+    font-size: 1em;
+}
