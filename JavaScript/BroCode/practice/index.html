@@ -56,7 +56,30 @@
     </div>
 
 
-    
+    <form>
+        <h1>Temperature Conversion</h1>
+        <input type="text" id="textBox" value="0"><br>
+
+        <input type="radio" id="toFar" name="unit">
+        <label for="toFar">Celsius ➡️ Fahrenheit</label><br>
+
+        <input type="radio" id="toCel" name="unit">
+        <label for="toCel">Fahrenheit ➡️ Celsius</label><br>
+
+        <button type="submit" id="mySubmit4">Convert</button>
+        <p id="result"></p>
+    </form>
+
+    <div id="container">
+        <h1>Dice Roller</h1>
+
+        <label>Number of dice: </label>
+        <input type="number" value="1" id="numofDice" min="1">
+        <button id="rollDice">Roll Dice</button>
+
+        <div id="diceResult"></div>
+        <div id="diceImages"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
