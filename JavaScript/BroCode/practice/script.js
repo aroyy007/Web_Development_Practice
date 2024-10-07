@@ -437,3 +437,432 @@ function hello() {
 function goodbye() {
     console.log("Goodbye");
 }
+
+
+// ** .map() method */
+
+const numbers = [1, 2, 3, 4, 5];
+
+const squares = numbers.map(square);
+console.log(squares);
+
+const cubes = numbers.map(cube);
+console.log(cubes);
+
+function square(element) {
+    return element * element;
+}
+
+function cube(element) {
+    return Math.pow(element, 3);
+}
+
+const students = ["SpongeBob", "Patrick", "SquidWard", "Sandy", "MrKrabs"];
+const upperCaseStudents = students.map(upperCase);
+console.log(upperCaseStudents);
+
+const lowerCaseStudents = students.map(lowerCase);
+console.log(lowerCaseStudents);
+
+function upperCase(element) {
+    return element.toUpperCase();
+}
+
+function lowerCase(element) {
+    return element.toLowerCase();
+}
+
+const dates = ["2024-1-10", "2024-2-10", "2024-3-10", "2024-4-10", "2024-5-10"];
+const formatDaates = dates.map(formatDates);
+console.log(formatDaates);
+function formatDates(element) {
+    const parts = element.split("-");
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+}
+
+
+//** .filter() method : creates a new array by filtering out elements  */
+
+const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenNums = numbers1.filter(isEven);
+const oddNums = numbers1.filter(isOdd);
+
+console.log(evenNums);
+console.log(oddNums);
+
+
+function isEven(element) {
+    return element % 2 == 0;
+}
+
+function isOdd(element) {
+    return element % 2 != 0;
+}
+
+const words = ["apple", "banana", "cherry", "date", "elderberry"];
+const shortWords = words.filter(getShortWords);
+console.log(shortWords);
+
+function getShortWords(element) {
+    return element.length <= 5;
+}
+
+//**Reduce() : reduce the elements of an array to a single value */
+
+const price = [10, 20, 30, 40, 50];
+const total = price.reduce(sum);
+console.log(`Sum is ${total}`);
+
+const maxPrice = price.reduce(getMax);
+console.log(`Maximum price is ${maxPrice}`);
+
+const minPrice = price.reduce(getMin);
+console.log(`Minimum price is ${minPrice}`);
+
+function sum(accumulator, element) {
+    return accumulator + element;
+}
+
+function getMax(accumulator, element) {
+    return Math.max(accumulator, element);
+}
+
+function getMin(accumulator, element) {
+    return Math.min(accumulator, element);
+}
+
+//**Function Expression : a way to define function as values or variable */
+
+setTimeout(function () {
+    console.log("Hello");
+}, 1000);
+
+const numbers2 = [1, 2, 3, 4, 5];
+
+const squares1 = numbers2.map(function (element) {
+    return element * element;
+});
+
+console.log(squares1);
+
+const cubes1 = numbers2.map(function (element) {
+    return Math.pow(element, 3);
+});
+
+console.log(cubes1);
+
+const evenNum = numbers2.filter(function (element) {
+    return element % 2 == 0;
+});
+
+console.log(evenNum);
+
+const totalSum = numbers2.reduce(function (accumulator, element) {
+    return accumulator + element;
+});
+
+console.log(totalSum);
+
+//**Arrow Function : a concise way to write function expressions good for simple functions that you can use only 
+// ** once (parameter) => some code */
+
+const hello1 = (name, age) => {
+    console.log(`Hello ${name} You are ${age} years old.`);
+}
+
+hello1("Tony Stark", 50);
+
+//**Objects */
+
+const person1 = {
+    name: "Tony Stark",
+    age: 50,
+    isAvenger: true,
+    address: {
+        city: "New York",
+        country: "USA"
+    },
+    sayHello: function () {
+        console.log(`Hello I am ${this.name}`);
+    }
+};
+
+console.log(person1.name);
+console.log(person1.age);
+console.log(person1.isAvenger);
+console.log(person1.address.city);
+
+person1.sayHello();
+
+const person2 = {
+    name: "Steve Rogers",
+    age: 100,
+    isAvenger: true,
+    address: {
+        city: "Brooklyn",
+        country: "USA"
+    },
+    sayHello: function () {
+        console.log(`Hello I am ${this.name}`);  // not work with arrow function
+    }
+};
+
+console.log(person2.name);
+console.log(person2.age);
+console.log(person2.isAvenger);
+console.log(person2.address.city);
+
+person2.sayHello();
+
+
+//**Constructor */
+
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.drive = function () {
+        console.log(`${this.make} ${this.model} is driving.`);
+    };
+}
+
+const car1 = new Car("Toyota", "Corolla", 2021);
+const car2 = new Car("Honda", "Civic", 2022);
+
+console.log(car1);
+car1.drive();
+
+console.log(car2);
+
+
+//**Class */
+
+class Products {
+    constructor(name, price, quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    getTotal() {
+        let total = this.price * this.quantity;
+        return `Total price is $${total}`;
+    }
+}
+
+const product1 = new Products("Laptop", 1000, 5);
+const product2 = new Products("Mobile", 400, 12);
+
+console.log(product1.getTotal());
+console.log(product2.getTotal());
+
+
+//**Inheritance : allows a new class to inherit properties and methods from an existing class ( parent -> child) */
+//** helps with code reusability */
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        console.log(`${this.name} is eating.`);
+    }
+
+    sleep() {
+        console.log(`${this.name} is sleeping.`);
+    }
+}
+
+class Rabbit extends Animal {
+    jump() {
+        console.log(`${this.name} is jumping.`);
+    }
+}
+
+class Fish extends Animal {
+    swim() {
+        console.log(`${this.name} is swimming.`);
+    }
+}
+
+const rabbit = new Rabbit("Bugs Bunny");
+rabbit.eat();
+rabbit.sleep();
+
+const fish = new Fish("Nemo");
+fish.eat();
+fish.sleep();
+
+//** Super Keyword  : The Parent */
+//** extends keyword : The Child */
+//** This Keyword : this object */
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    sayHello() {
+        console.log(`Hello I am ${this.name}`);
+    }
+}
+
+class Student extends Person {
+    constructor(name, age, grade) {
+        super(name, age);
+        this.grade = grade;
+    }
+
+    study() {
+        console.log(`${this.name} is studying.`);
+    }
+}
+
+const student1 = new Student("Tony Stark", 50, "A+");
+console.log(student1);
+student1.sayHello();
+
+//** Getter & Setter */
+
+class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    set width(newWidth) {
+        if (newWidth > 0) {
+            this._width = newWidth;
+        }
+        else {
+            console.error("Width must be a positive number.");
+        }
+    }
+
+    set height(newHeight) {
+        if (newHeight > 0) {
+            this._height = newHeight;
+        }
+        else {
+            console.error("Height must be a positive number.");
+        }
+    }
+
+    get width() {
+        return this._width.toFixed(2);
+    }
+
+    get height() {
+        return this._height.toFixed(2);
+    }
+
+    get area() {
+        return `${(this._width * this._height).toFixed(2)} sq units`;
+    }
+}
+
+
+const rec1 = new Rectangle(-1000000, "Pizza");
+console.log(rec1);
+
+const rec2 = new Rectangle(10, 20);
+rec2.width = 100;
+rec2.height = 200;
+
+console.log(rec2);
+console.log(rec2.area);
+
+
+//** Destructing  */
+//** [] -> Array Destructing */
+
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];   // swapping values
+console.log(a, b);   // 2 1
+
+const colors = ["red", "green", "blue"];
+
+console.log(colors);  // red
+
+[colors[0], colors[1]] = [colors[1], colors[0]];
+
+console.log(colors);  // green red blue
+
+const [firstColor, secondColor] = colors;
+
+console.log(firstColor);  // green
+console.log(secondColor);  // red
+
+
+//** Object Destructing */
+
+const person3 = {
+    name: "Tony Stark",
+    age: 50,
+    address: {
+        city: "New York",
+        country: "USA"
+    }
+};
+
+// const {name, age} = person3;
+// console.log(name);  // Tony Stark
+// console.log(age);  // 50
+
+const { city, country } = person3.address;
+console.log(city);  // New York
+console.log(country);  // USA
+
+
+//** Sorting */
+
+const numbers11 = [10, 1, 5, 3, 7, 2, 9, 4, 6, 8];
+
+numbers11.sort();
+
+console.log(numbers11);  // 1,10,2,3,4,5,6,7,8,9  // not correct
+
+numbers11.sort((a, b) => a - b);
+
+console.log(numbers11);  // 1,2,3,4,5,6,7,8,9,10  // correct
+
+const people = [{ name: "Tony", age: 50 }, { name: "Steve", age: 100 }, { name: "Bruce", age: 45 }, { name: "Peter", age: 20 }];
+
+// people.sort((a, b) => a.age - b.age);  // sort by age
+people.sort((a, b) => a.name.localeCompare(b.name)); // sort by name
+
+console.log(people);
+
+//**Shuffle the array : Fisher-Yates Algorithm */
+
+const numbers12 = [1, 2, 'A', 3, 4, 'B', 5, 6, 'C', 7, 8, 'D', 9, 10, 'E'];
+
+for (let i = numbers12.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [numbers12[i], numbers12[j]] = [numbers12[j], numbers12[i]];
+}
+
+console.log(numbers12);
+
+//**Date Object :  */
+
+const now = new Date(1730000000000);
+const year = now.getFullYear();
+const month = now.getMonth();
+const date = now.getDate();
+const day1 = now.getDay();
+const hours = now.getHours();
+const minutes = now.getMinutes();
+
+
+console.log(now);
+console.log(`Year is ${year}`);
+console.log(`Month is ${month}`);
+console.log(`Date is ${date}`);
+console.log(`Day is ${day1}`);
+console.log(`Hours is ${hours}`);
+console.log(`Minutes is ${minutes}`);
