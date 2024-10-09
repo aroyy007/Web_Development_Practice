@@ -866,3 +866,133 @@ console.log(`Date is ${date}`);
 console.log(`Day is ${day1}`);
 console.log(`Hours is ${hours}`);
 console.log(`Minutes is ${minutes}`);
+
+
+//**SetTimeOut func :  */
+
+const timeOutId = setTimeout(() => {
+    console.log("Hello");
+}, 3000);
+
+clearTimeout(timeOutId);
+
+//**Digital Clock */
+
+function updateClock() {
+    const now = new Date();
+    let hours = now.getHours().toString().padStart(2, "0");
+    const meridiem = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12;
+    hours = hours.toString().padStart(2, "0");
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+    const seconds = now.getSeconds().toString().padStart(2, "0");
+
+    document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds} ${meridiem}`;
+}
+
+setInterval(updateClock, 1000);
+
+//**Stopwatch */
+
+const display = document.getElementById("display");
+let timer = null;
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+
+function start() {
+    if (!isRunning) {
+        startTime = Date.now() - elapsedTime;
+        timer = setInterval(update, 10);
+        isRunning = true;
+    }
+}
+
+function stop() {
+    if (isRunning) {
+        clearInterval(timer);
+        elapsedTime = Date.now() - startTime;
+        isRunning = false;
+    }
+}
+
+function reset() {
+    clearInterval(timer);
+    elapsedTime = 0;
+    startTime = 0;
+    display.textContent = "00:00:00:00";
+    isRunning = false;
+}
+
+function update() {
+    const currentTime = Date.now();
+    elapsedTime = currentTime - startTime;
+
+    let hours = Math.floor(elapsedTime / 3600000);
+    let minutes = Math.floor(elapsedTime % 3600000 / 60000);
+    let seconds = Math.floor(elapsedTime % 60000 / 1000);
+    let milliseconds = Math.floor(elapsedTime % 1000 / 10);
+
+    display.textContent = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${milliseconds.toString().padStart(2, "0")}`;
+}
+
+//**ES6 modules */
+
+// import {getCircleArea, getCircleCircumference } from "./Mathutil.js";
+
+
+// const getCircleArea11 = getCircleArea(5);
+// console.log(getCircleArea11);
+
+// const getCircleCircumference11 = getCircleCircumference(5);
+// console.log(getCircleCircumference11);
+
+//**Default Export */
+
+// import MathUtil from "./Mathutil.js";
+
+// console.log(MathUtil.PI);
+
+// const getCircleArea22 = MathUtil.getCircleArea(5);
+// console.log(getCircleArea22);
+
+// const getCircleCircumference22 = MathUtil.getCircleCircumference(5);
+// console.log(getCircleCircumference22);
+
+//**Named Export */
+
+// import {PI as PI44, getCircleArea as getCircleArea1, getCircleCircumference as getCircleCircumference1} from "./Mathutil.js";
+
+// console.log(PI44);
+
+// const getCircleArea3 = getCircleArea1(5);
+// console.log(getCircleArea3);
+
+// const getCircleCircumference3 = getCircleCircumference1(5);
+// console.log(getCircleCircumference3);
+
+//**Calculator App */
+
+const display11 = document.getElementById("display");
+
+function appendToDisplay(value) {
+    display11.value += value;
+}
+
+function clearDisplay() {
+    display11.value = "";
+}
+
+function calculate() {
+    try {
+        display11.value = eval(display11.value);
+    }
+    catch (error) {
+        display11.value = "Error";
+    }
+}
+
+
+
+
+
