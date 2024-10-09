@@ -147,3 +147,167 @@ form button:hover{
     font-weight: 600;
     margin-top: 20px;
 }
+
+#clock_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 50%;
+    margin: auto;
+    border: 1.5px solid hsl(0, 0%, 0%,0.8);
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: hsl(0, 0%, 50%);
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 0 10px;
+    backdrop-filter: blur(5px);
+}
+
+#stopwatch
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 90%);
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+#myH11{
+    font-size: 4em;
+    font-weight: 600;
+    margin-top: 20px;
+    color: hsl(0, 0%, 33%);
+}
+
+#container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid hsl(0, 0%, 31%);
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#display{
+    font-size: 5em;
+    font-family: monospace;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: hsl(0, 0%, 30%);
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
+}
+
+#controls button{
+    font-size: 1.5rem;
+    font-size: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#startBtn{
+    background-color: hsl(120, 100%, 30%);
+}
+
+#startBtn:hover{
+    background-color: hsl(120, 100%, 40%);
+}
+
+#stopBtn{
+    background-color: hsl(0, 100%, 50%);
+}
+
+#stopBtn:hover{
+    background-color: hsl(0, 100%, 60%);
+}
+
+#resetBtn{
+    background-color: hsl(205, 90%, 50%);
+}
+
+#resetBtn:hover{
+    background-color: hsl(205, 90%, 60%);
+}
+
+/**Calculator CSS**/
+
+
+#calculator button {
+    text-align: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calculator button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+#calculator button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+/* Make the operator button styles more specific */
+#calculator .operatorBtn {
+    background-color: hsl(35, 100%, 55%);
+}
+
+#calculator .operatorBtn:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+
+#calculator .operatorBtn:active {
+    background-color: hsl(35, 100%, 75%);
+}
+
+#calculator #keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+#calculator {
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#calculator #display {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 20px;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    border-bottom: 2px solid hsl(0, 0%, 20%);
+}
