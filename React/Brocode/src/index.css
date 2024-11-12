@@ -1,0 +1,333 @@
+*{
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  cursor: pointer;
+}
+
+.card .card-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card .card-title {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: hsl(0, 0%, 20%);
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card .card-text {
+  font-family: Arial, sans-serif;
+  color: hsl(0, 100%, 35%);
+  font-size: 1em;
+  margin: 0;
+}
+
+.button {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.student {
+  font-family: Arial, sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+  padding: 10px;
+  border: 1px solid hsla(0, 0%, 80%, 0.8);
+  max-width: 200px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.student p{
+  margin: 0;
+}
+
+.welcomeMessage{
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  color: whitesmoke;
+  background-color: rgb(17, 148, 17);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  width: 40%;
+}
+
+.alertMessage{
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  color: whitesmoke;
+  background-color: rgb(148, 17, 17);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  width: 40%;
+}
+
+.list-category{
+  font-family: Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: hsl(0, 0%, 20%);
+  margin-bottom: 10px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 5px;
+  background-color: hsl(185,100%,50%);
+}
+
+.list-details{
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  color: hsl(0, 0%, 20%);
+  margin-bottom: 10px;
+  text-align: left;
+}
+.list-items{
+  font-size: 2em;
+  list-style: none;
+  text-align: center;
+  color: hsl(0, 0%, 25%);
+  margin: 0;
+  transition: all ease 0.35s;
+}
+
+.list-items li:hover{
+  background-color: hsla(0, 1%, 67%, 0.803);
+  border-radius: 10px;
+  cursor: pointer;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.counter-container{
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.count-display{
+  font-size: 5em;
+  color: hsl(0, 0%, 20%);
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.counter-button{
+  width: 150px;
+  height: 50px;
+  font-size: 1.5em;
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  border: 2px solid hsl(0, 0%, 80%) ;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.counter-button:hover{
+  background-color: hsl(200, 100%, 40%);
+}
+
+.color-picker-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.color-picker-container h1{
+  margin: 25px;
+  font-size: 3rem;
+
+}
+.color-display{
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid hsl(0, 0%, 80%);
+  margin-bottom: 25px;
+  transition: all ease 0.35s;
+}
+
+.color-display p{
+  font-size: 2rem;
+  color: hsl(0, 0%, 20%);
+  text-align: center;
+}
+
+.color-picker-container label{
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 20%);
+  margin-bottom: 10px;
+
+}
+.color-picker-container input[type="color"]{
+  width: 75px;
+  height: 50px;
+  padding: 5px;
+  border: 2px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.todo-list-container{
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: rgb(193, 188, 188);
+}
+
+.todo-list-container h1{
+  font-size: 3em;
+  color: hsl(0, 0%, 20%);
+  margin-bottom: 20px;
+}
+
+.todo-list-container button{
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-button{
+  background-color: hsl(125, 47%, 54%);
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-button:hover{
+  background-color: hsl(125, 47%, 44%);
+}
+
+.delete-button{
+  background-color: hsl(0, 100%, 50%);
+}
+
+.delete-button:hover{
+  background-color: hsl(0, 100%, 40%);
+}
+
+.move-button{
+  background-color: hsl(200, 100%, 50%);
+}
+
+.move-button:hover{
+  background-color: hsl(200, 100%, 40%);
+}
+
+.todo-list-container input[type="text"]{
+  width: 50%;
+  height: 50px;
+  font-size: 1.5em;
+  padding: 10px;
+  border: 2px solid hsl(0, 0%, 80%);
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-list-container ol{
+  padding: 0;
+}
+
+.todo-list-container li{
+  font-size: 2em;
+  border-radius: 5px;
+  color: hsl(0, 0%, 20%);
+  background-color: hsl(0,0%,97%);
+  border: 3px solid hsla(0, 0%, 80%,0.75);
+  margin-bottom: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list-container .text{
+  flex: 1;
+}
+
+.delete-button,.move-button{
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+
+
+.clock-container{
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(56, 56, 56);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+
+.clock{
+  font-size: 5em;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  color: whitesmoke;
+
+  text-shadow: 3px 3px 3px hsla(0, 0%, 0%, 0.75);
+}
